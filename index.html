@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biology 1 Basics — The Essential Guide</title>
+  <title>Biology 1 Basics &mdash; The Essential Guide</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -36,7 +36,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── HEADER ── */
+    /* -- HEADER -- */
     .header {
       background: linear-gradient(135deg, #143a1e 0%, #2a7a3e 50%, #3a9a50 100%);
       color: white;
@@ -69,7 +69,7 @@
       margin: 0 auto;
     }
 
-    /* ── LAYOUT ── */
+    /* -- LAYOUT -- */
     .wrap {
       max-width: 860px;
       margin: 0 auto;
@@ -85,7 +85,7 @@
       line-height: 1.8;
     }
 
-    /* ── SECTION ── */
+    /* -- SECTION -- */
     .section { margin-bottom: 3rem; }
     .section-title {
       display: flex;
@@ -119,7 +119,7 @@
       margin-bottom: 1.25rem;
     }
 
-    /* ── CARD ── */
+    /* -- CARD -- */
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -137,7 +137,7 @@
     }
     .card p { margin-bottom: 0.6rem; font-size: 0.95rem; }
 
-    /* ── TEXT ── */
+    /* -- TEXT -- */
     .explain {
       font-size: 0.95rem;
       line-height: 1.8;
@@ -155,7 +155,7 @@
       white-space: nowrap;
     }
 
-    /* ── EXAMPLE BOX ── */
+    /* -- EXAMPLE BOX -- */
     .example {
       background: var(--gold-pale);
       border-left: 3px solid var(--gold);
@@ -174,7 +174,7 @@
     }
     .example p { font-size: 0.93rem; margin-bottom: 0.35rem; }
 
-    /* ── TIP BOX ── */
+    /* -- TIP BOX -- */
     .tip {
       background: var(--green-pale);
       border-left: 3px solid var(--green);
@@ -186,7 +186,7 @@
       color: var(--green-deep);
     }
 
-    /* ── TABLE ── */
+    /* -- TABLE -- */
     .tbl {
       width: 100%;
       border-collapse: collapse;
@@ -208,7 +208,7 @@
       border-top: 1px solid var(--border);
     }
 
-    /* ── MNEMONIC ── */
+    /* -- MNEMONIC -- */
     .mnemonic {
       background: #fffbe6;
       border-left: 3px solid var(--gold);
@@ -219,7 +219,7 @@
       font-style: italic;
     }
 
-    /* ── QUIZ ── */
+    /* -- QUIZ -- */
     .quiz-q {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -309,7 +309,7 @@
     }
     .score-msg { font-size: 0.9rem; color: var(--text-soft); }
 
-    /* ── FLASHCARD ── */
+    /* -- FLASHCARD -- */
     .fc-filters {
       display: flex;
       flex-wrap: wrap;
@@ -411,17 +411,17 @@
       .fc-grid { grid-template-columns: 1fr; }
       .header { padding: 2.5rem 1.25rem 2rem; }
     }
-  
-/* ─── WCAG 2.1 AA: Visible focus indicators ─── */
+
+/* ---- WCAG 2.1 AA: Visible focus indicators ---- */
 :focus-visible {
   outline: 3px solid #005fcc !important;
   outline-offset: 2px !important;
 }
-.tab-btn:focus-visible, .nav-btn:focus-visible {
+.btn:focus-visible, .fc-tag:focus-visible {
   outline: 3px solid #005fcc !important;
   outline-offset: 2px !important;
 }
-/* ─── Skip link ─── */
+/* ---- Skip link ---- */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -439,26 +439,39 @@
 .skip-link:focus {
   top: 0;
 }
-
+/* ---- Screen reader only ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
 </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<!-- Live region for screen reader announcements -->
+<div id="live-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
-<div class="header">
+<header class="header">
   <h1>Biology 1 Basics</h1>
   <p>The essential ideas, explained simply, with examples that make them stick.</p>
-</div>
+</header>
 
-<div class="wrap">
+<div class="wrap" id="main-content" role="main">
 
   <p class="intro">
     This guide covers the core concepts of introductory biology in plain language. Each topic is explained first, then reinforced with examples and memory tricks, so you understand the "why" before you memorize the "what."
   </p>
 
-  <!-- ═══════ 1. CHEMISTRY OF LIFE ═══════ -->
-  <div class="section" id="s1">
+  <!-- ======= 1. CHEMISTRY OF LIFE ======= -->
+  <section class="section" id="s1">
     <div class="section-title"><span class="section-num">1</span><h2>The Chemistry of Life</h2></div>
     <hr class="section-rule">
 
@@ -470,7 +483,7 @@
 
     <div class="card">
       <h3>Why Water Is Special</h3>
-      <p class="explain">Water (H₂O) is a <strong>polar molecule</strong>, meaning one end is slightly positive and the other is slightly negative. Think of it like a tiny magnet. This polarity is the reason water can do so many things that other liquids cannot.</p>
+      <p class="explain">Water (H&#8322;O) is a <strong>polar molecule</strong>, meaning one end is slightly positive and the other is slightly negative. Think of it like a tiny magnet. This polarity is the reason water can do so many things that other liquids cannot.</p>
       <p class="explain">Because water molecules are polar, they stick to each other through <strong>hydrogen bonds</strong>. These bonds are individually weak, but because there are so many of them, they give water remarkable properties:</p>
       <p class="explain"><strong>It dissolves almost everything</strong> (polar and ionic substances), which is why your blood can carry nutrients and your cells can run chemical reactions.</p>
       <p class="explain"><strong>It resists temperature changes</strong> (high specific heat), which is why your body temperature stays stable even when it's hot or cold outside.</p>
@@ -491,7 +504,7 @@
       <div class="example">
         <div class="example-label">Worked Example</div>
         <p>How much more acidic is a solution at pH 3 compared to pH 5?</p>
-        <p>Each step = 10x more H⁺ ions. Two steps = 10 x 10 = <strong>100 times more acidic</strong>.</p>
+        <p>Each step = 10x more H&#8314; ions. Two steps = 10 x 10 = <strong>100 times more acidic</strong>.</p>
       </div>
     </div>
 
@@ -499,7 +512,8 @@
       <h3>The Four Macromolecules</h3>
       <p class="explain">All living things are built from four categories of large molecules. Each is a polymer (long chain) built from smaller monomers (building blocks), snapped together like beads on a string.</p>
       <table class="tbl">
-        <tr><th>Macromolecule</th><th>Monomer (building block)</th><th>Bond that links them</th><th>Example</th></tr>
+        <caption class="sr-only">The four macromolecules, their monomers, bonds, and examples</caption>
+        <tr><th scope="col">Macromolecule</th><th scope="col">Monomer (building block)</th><th scope="col">Bond that links them</th><th scope="col">Example</th></tr>
         <tr><td>Carbohydrate</td><td>Monosaccharide (simple sugar)</td><td>Glycosidic</td><td>Starch, cellulose</td></tr>
         <tr><td>Protein</td><td>Amino acid</td><td>Peptide</td><td>Enzymes, hemoglobin</td></tr>
         <tr><td>Nucleic acid</td><td>Nucleotide</td><td>Phosphodiester</td><td>DNA, RNA</td></tr>
@@ -518,10 +532,10 @@
 
       <div class="tip">A good analogy: covalent bonds are like bolts holding a bridge together. Hydrogen bonds are like sticky notes. One sticky note peels off easily, but a thousand of them can hold a heavy book to a wall.</div>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 2. THE CELL ═══════ -->
-  <div class="section" id="s2">
+  <!-- ======= 2. THE CELL ======= -->
+  <section class="section" id="s2">
     <div class="section-title"><span class="section-num">2</span><h2>The Cell</h2></div>
     <hr class="section-rule">
 
@@ -536,9 +550,10 @@
       <h3>Prokaryotes vs. Eukaryotes</h3>
       <p class="explain">This is the most fundamental divide in cell biology. The key difference: <strong>eukaryotes have a nucleus</strong> (a membrane-wrapped compartment holding DNA), and <strong>prokaryotes do not</strong>.</p>
       <table class="tbl">
-        <tr><th>Feature</th><th>Prokaryote</th><th>Eukaryote</th></tr>
+        <caption class="sr-only">Comparison of prokaryotic and eukaryotic cells</caption>
+        <tr><th scope="col">Feature</th><th scope="col">Prokaryote</th><th scope="col">Eukaryote</th></tr>
         <tr><td>Nucleus?</td><td>No (DNA floats in the cell)</td><td>Yes (DNA in nucleus)</td></tr>
-        <tr><td>Size</td><td>Small (1 to 10 µm)</td><td>Larger (10 to 100 µm)</td></tr>
+        <tr><td>Size</td><td>Small (1 to 10 &#181;m)</td><td>Larger (10 to 100 &#181;m)</td></tr>
         <tr><td>DNA shape</td><td>Circular</td><td>Linear chromosomes</td></tr>
         <tr><td>Organelles?</td><td>None with membranes</td><td>Many (mitochondria, ER, etc.)</td></tr>
         <tr><td>Examples</td><td>Bacteria, Archaea</td><td>Animals, Plants, Fungi</td></tr>
@@ -568,10 +583,10 @@
       <p class="explain">This explains where mitochondria and chloroplasts came from. The idea: billions of years ago, a large cell swallowed a smaller prokaryotic cell but didn't digest it. Instead, they formed a partnership. The small cell became the mitochondrion (or chloroplast), living inside the larger cell and providing it with energy.</p>
       <p class="explain"><strong>Evidence that this actually happened:</strong> mitochondria and chloroplasts have their own circular DNA (like bacteria), their own ribosomes (bacterial-sized, 70S), double membranes (the inner one was the original bacterium's membrane), and they divide by binary fission (the way bacteria reproduce).</p>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 3. MEMBRANES & TRANSPORT ═══════ -->
-  <div class="section" id="s3">
+  <!-- ======= 3. MEMBRANES & TRANSPORT ======= -->
+  <section class="section" id="s3">
     <div class="section-title"><span class="section-num">3</span><h2>Membranes &amp; Transport</h2></div>
     <hr class="section-rule">
 
@@ -587,7 +602,8 @@
       <p class="explain"><strong>Passive transport</strong> (no energy needed): molecules move from where there are MORE of them to where there are FEWER, like a ball rolling downhill.</p>
       <p class="explain"><strong>Active transport</strong> (requires ATP energy): molecules are pushed from where there are fewer to where there are more, like pushing a ball uphill.</p>
       <table class="tbl">
-        <tr><th>Type</th><th>Needs Energy?</th><th>Direction</th></tr>
+        <caption class="sr-only">Types of cellular transport</caption>
+        <tr><th scope="col">Type</th><th scope="col">Needs Energy?</th><th scope="col">Direction</th></tr>
         <tr><td>Simple diffusion</td><td>No</td><td>High concentration to low</td></tr>
         <tr><td>Facilitated diffusion</td><td>No</td><td>High to low, through a protein channel</td></tr>
         <tr><td>Osmosis</td><td>No</td><td>Water moves toward higher solute concentration</td></tr>
@@ -611,17 +627,17 @@
 
       <div class="mnemonic">"Hypo Hippo": a cell in a hypotonic solution swells up like a hippo. "Hyper Shrivels": a cell in a hypertonic solution shrivels up.</div>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 4. ENERGY ═══════ -->
-  <div class="section" id="s4">
+  <!-- ======= 4. ENERGY ======= -->
+  <section class="section" id="s4">
     <div class="section-title"><span class="section-num">4</span><h2>Energy &amp; Metabolism</h2></div>
     <hr class="section-rule">
 
     <div class="card">
       <h3>ATP: The Energy Currency</h3>
       <p class="explain">Cells don't burn food directly. Instead, they break food down and transfer the energy into a small molecule called <strong>ATP</strong> (adenosine triphosphate). When a cell needs energy for anything, it snaps the last phosphate off ATP, releasing energy. Think of ATP as a rechargeable battery: it gets charged up during cellular respiration and spent whenever the cell does work.</p>
-      <p class="explain" style="text-align:center;margin:0.5rem 0"><span class="f">ATP <span aria-hidden="true">→</span> ADP + Pᵢ + energy</span></p>
+      <p class="explain" style="text-align:center;margin:0.5rem 0"><span class="f">ATP <span aria-hidden="true">&rarr;</span> ADP + P&#7522; + energy</span></p>
     </div>
 
     <div class="card">
@@ -640,29 +656,29 @@
     <div class="card">
       <h3>Cellular Respiration: Turning Food Into Energy</h3>
       <p class="explain">This is how your cells extract energy from glucose. The overall equation:</p>
-      <p class="explain" style="text-align:center;margin:0.5rem 0"><span class="f">C₆H₁₂O₆ + 6O₂ <span aria-hidden="true">→</span> 6CO₂ + 6H₂O + ~30-32 ATP</span></p>
-      <p class="explain">In plain English: glucose + oxygen <span aria-hidden="true">→</span> carbon dioxide + water + energy. This happens in three main stages:</p>
+      <p class="explain" style="text-align:center;margin:0.5rem 0"><span class="f">C&#8326;H&#8321;&#8322;O&#8326; + 6O&#8322; <span aria-hidden="true">&rarr;</span> 6CO&#8322; + 6H&#8322;O + ~30-32 ATP</span></p>
+      <p class="explain">In plain English: glucose + oxygen <span aria-hidden="true">&rarr;</span> carbon dioxide + water + energy. This happens in three main stages:</p>
       <p class="explain"><strong>1. Glycolysis</strong> (in the cytoplasm): splits glucose in half. Produces 2 ATP. Does not need oxygen.</p>
-      <p class="explain"><strong>2. Krebs Cycle</strong> (in the mitochondrial matrix): processes the fragments from glycolysis. Produces 2 ATP and a lot of electron carriers (NADH, FADH₂).</p>
+      <p class="explain"><strong>2. Krebs Cycle</strong> (in the mitochondrial matrix): processes the fragments from glycolysis. Produces 2 ATP and a lot of electron carriers (NADH, FADH&#8322;).</p>
       <p class="explain"><strong>3. Electron Transport Chain</strong> (inner mitochondrial membrane): the big payoff. Uses those electron carriers to produce about 26-28 ATP.</p>
 
-      <div class="tip">If no oxygen is available, the cell can only do glycolysis, followed by <strong>fermentation</strong> to recycle its supplies. This produces only 2 ATP per glucose. In your muscles, fermentation makes lactic acid. In yeast, it makes alcohol and CO₂ (which is how beer and bread are made).</div>
+      <div class="tip">If no oxygen is available, the cell can only do glycolysis, followed by <strong>fermentation</strong> to recycle its supplies. This produces only 2 ATP per glucose. In your muscles, fermentation makes lactic acid. In yeast, it makes alcohol and CO&#8322; (which is how beer and bread are made).</div>
     </div>
 
     <div class="card">
       <h3>Photosynthesis: Turning Sunlight Into Food</h3>
-      <p class="explain">This is essentially cellular respiration in reverse. Plants, algae, and some bacteria capture light energy and use it to build glucose from CO₂ and water:</p>
-      <p class="explain" style="text-align:center;margin:0.5rem 0"><span class="f">6CO₂ + 6H₂O + light <span aria-hidden="true">→</span> C₆H₁₂O₆ + 6O₂</span></p>
+      <p class="explain">This is essentially cellular respiration in reverse. Plants, algae, and some bacteria capture light energy and use it to build glucose from CO&#8322; and water:</p>
+      <p class="explain" style="text-align:center;margin:0.5rem 0"><span class="f">6CO&#8322; + 6H&#8322;O + light <span aria-hidden="true">&rarr;</span> C&#8326;H&#8321;&#8322;O&#8326; + 6O&#8322;</span></p>
       <p class="explain">It happens in two stages inside the <strong>chloroplast</strong>:</p>
-      <p class="explain"><strong>Light reactions</strong> (thylakoid membranes): capture sunlight, split water, produce ATP and NADPH, release O₂.</p>
-      <p class="explain"><strong>Calvin cycle</strong> (stroma): uses the ATP and NADPH to build sugar from CO₂.</p>
+      <p class="explain"><strong>Light reactions</strong> (thylakoid membranes): capture sunlight, split water, produce ATP and NADPH, release O&#8322;.</p>
+      <p class="explain"><strong>Calvin cycle</strong> (stroma): uses the ATP and NADPH to build sugar from CO&#8322;.</p>
 
       <div class="tip">Chlorophyll absorbs red and blue light and reflects green, which is why plants look green.</div>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 5. DNA & GENETICS ═══════ -->
-  <div class="section" id="s5">
+  <!-- ======= 5. DNA & GENETICS ======= -->
+  <section class="section" id="s5">
     <div class="section-title"><span class="section-num">5</span><h2>DNA, RNA &amp; the Genetic Code</h2></div>
     <hr class="section-rule">
 
@@ -676,7 +692,7 @@
       <div class="mnemonic">"Apples in Trees (A-T), Cars in Garages (C-G)"</div>
 
       <div class="example">
-        <div class="example-label">Worked Example — Chargaff's Rules</div>
+        <div class="example-label">Worked Example &mdash; Chargaff's Rules</div>
         <p>If a DNA sample is 20% adenine, what are the other percentages?</p>
         <p>A always pairs with T, so <strong>T = 20%</strong>. That accounts for 40% total. The remaining 60% is split evenly between G and C: <strong>G = 30%, C = 30%</strong>.</p>
       </div>
@@ -686,7 +702,8 @@
       <h3>DNA vs. RNA</h3>
       <p class="explain">Think of DNA as the <strong>master blueprint</strong> that stays safe in the nucleus. RNA is the <strong>working copy</strong> that carries instructions out to the ribosomes where proteins are built.</p>
       <table class="tbl">
-        <tr><th>Feature</th><th>DNA</th><th>RNA</th></tr>
+        <caption class="sr-only">Comparison of DNA and RNA</caption>
+        <tr><th scope="col">Feature</th><th scope="col">DNA</th><th scope="col">RNA</th></tr>
         <tr><td>Sugar</td><td>Deoxyribose</td><td>Ribose</td></tr>
         <tr><td>Strands</td><td>Double</td><td>Single</td></tr>
         <tr><td>Bases</td><td>A, T, G, C</td><td>A, <strong>U</strong>, G, C (uracil replaces thymine)</td></tr>
@@ -695,7 +712,7 @@
     </div>
 
     <div class="card">
-      <h3>The Central Dogma: DNA <span aria-hidden="true">→</span> RNA <span aria-hidden="true">→</span> Protein</h3>
+      <h3>The Central Dogma: DNA <span aria-hidden="true">&rarr;</span> RNA <span aria-hidden="true">&rarr;</span> Protein</h3>
       <p class="explain">This is the fundamental flow of genetic information. It has two main steps:</p>
       <p class="explain"><strong>Step 1: Transcription</strong> (in the nucleus). The cell copies a gene's DNA sequence into a messenger RNA (mRNA) molecule. Think: "transcription" = "rewriting in a new format," like transcribing a lecture into notes.</p>
       <p class="explain"><strong>Step 2: Translation</strong> (at ribosomes in the cytoplasm). The ribosome reads the mRNA three letters at a time (each group of three is called a <strong>codon</strong>). Each codon specifies one amino acid. Transfer RNA (tRNA) brings the correct amino acid, and the ribosome links them together into a protein. Think: "translation" = "converting one language (nucleotides) into another (amino acids)."</p>
@@ -728,10 +745,10 @@
         <p>Delete "B": THE <strong>IGR EDF OXR ANF AR</strong> (everything after the deletion is garbled)</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 6. CELL DIVISION ═══════ -->
-  <div class="section" id="s6">
+  <!-- ======= 6. CELL DIVISION ======= -->
+  <section class="section" id="s6">
     <div class="section-title"><span class="section-num">6</span><h2>Cell Division</h2></div>
     <hr class="section-rule">
 
@@ -757,7 +774,8 @@
     <div class="card">
       <h3>Mitosis vs. Meiosis at a Glance</h3>
       <table class="tbl">
-        <tr><th></th><th>Mitosis</th><th>Meiosis</th></tr>
+        <caption class="sr-only">Comparison of mitosis and meiosis</caption>
+        <tr><th scope="col"></th><th scope="col">Mitosis</th><th scope="col">Meiosis</th></tr>
         <tr><td>Divisions</td><td>1</td><td>2</td></tr>
         <tr><td>Daughter cells</td><td>2 (diploid)</td><td>4 (haploid)</td></tr>
         <tr><td>Genetically</td><td>Identical to parent</td><td>Unique</td></tr>
@@ -765,10 +783,10 @@
         <tr><td>Crossing over?</td><td>No</td><td>Yes</td></tr>
       </table>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 7. GENETICS ═══════ -->
-  <div class="section" id="s7">
+  <!-- ======= 7. GENETICS ======= -->
+  <section class="section" id="s7">
     <div class="section-title"><span class="section-num">7</span><h2>Genetics</h2></div>
     <hr class="section-rule">
 
@@ -790,7 +808,7 @@
       <p class="explain">A <strong>Punnett square</strong> is a simple grid that shows all possible offspring from a cross.</p>
 
       <div class="example">
-        <div class="example-label">Worked Example — Monohybrid Cross</div>
+        <div class="example-label">Worked Example &mdash; Monohybrid Cross</div>
         <p>Cross two heterozygous parents: <strong>Bb x Bb</strong></p>
         <p>The Punnett square gives: BB, Bb, Bb, bb</p>
         <p>Genotype ratio: 1 BB : 2 Bb : 1 bb</p>
@@ -798,7 +816,7 @@
       </div>
 
       <div class="example">
-        <div class="example-label">Worked Example — Dihybrid Cross</div>
+        <div class="example-label">Worked Example &mdash; Dihybrid Cross</div>
         <p>Cross: BbCc x BbCc (tracking two traits at once)</p>
         <p>Expected phenotype ratio: <strong>9:3:3:1</strong></p>
       </div>
@@ -815,22 +833,22 @@
       <h3>Hardy-Weinberg Equilibrium</h3>
       <p class="explain">This is a mathematical model that predicts allele frequencies in a population that is NOT evolving. If the population is in equilibrium (no evolution happening), then:</p>
       <p class="explain" style="text-align:center"><span class="f">p + q = 1</span> (allele frequencies)</p>
-      <p class="explain" style="text-align:center"><span class="f">p² + 2pq + q² = 1</span> (genotype frequencies)</p>
+      <p class="explain" style="text-align:center"><span class="f">p&#178; + 2pq + q&#178; = 1</span> (genotype frequencies)</p>
       <p class="explain">Where p = frequency of the dominant allele and q = frequency of the recessive allele.</p>
 
       <div class="example">
         <div class="example-label">Worked Example</div>
         <p>In a population, 16% are homozygous recessive (aa). Find the carrier frequency.</p>
-        <p>q² = 0.16, so q = 0.4. Then p = 1 - 0.4 = 0.6.</p>
+        <p>q&#178; = 0.16, so q = 0.4. Then p = 1 - 0.4 = 0.6.</p>
         <p>Carriers (heterozygotes) = 2pq = 2(0.6)(0.4) = <strong>0.48 = 48%</strong></p>
       </div>
 
       <div class="tip">Five conditions for Hardy-Weinberg: no mutation, no selection, random mating, no gene flow, large population. If any of these are violated, the population is evolving.</div>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 8. EVOLUTION ═══════ -->
-  <div class="section" id="s8">
+  <!-- ======= 8. EVOLUTION ======= -->
+  <section class="section" id="s8">
     <div class="section-title"><span class="section-num">8</span><h2>Evolution</h2></div>
     <hr class="section-rule">
 
@@ -844,7 +862,7 @@
 
       <div class="example">
         <div class="example-label">Classic Example</div>
-        <p>Darwin's finches: on different Galápagos islands, finches with beak shapes suited to the local food source (large seeds, insects, etc.) survived and reproduced more than those with less-suited beaks. Over many generations, this led to different species of finch on different islands.</p>
+        <p>Darwin's finches: on different Gal&aacute;pagos islands, finches with beak shapes suited to the local food source (large seeds, insects, etc.) survived and reproduced more than those with less-suited beaks. Over many generations, this led to different species of finch on different islands.</p>
       </div>
     </div>
 
@@ -859,14 +877,14 @@
     <div class="card">
       <h3>Taxonomic Classification</h3>
       <p class="explain">All living things are organized into a nested hierarchy:</p>
-      <p class="explain" style="text-align:center"><strong>Domain <span aria-hidden="true">→</span> Kingdom <span aria-hidden="true">→</span> Phylum <span aria-hidden="true">→</span> Class <span aria-hidden="true">→</span> Order <span aria-hidden="true">→</span> Family <span aria-hidden="true">→</span> Genus <span aria-hidden="true">→</span> Species</strong></p>
+      <p class="explain" style="text-align:center"><strong>Domain <span aria-hidden="true">&rarr;</span> Kingdom <span aria-hidden="true">&rarr;</span> Phylum <span aria-hidden="true">&rarr;</span> Class <span aria-hidden="true">&rarr;</span> Order <span aria-hidden="true">&rarr;</span> Family <span aria-hidden="true">&rarr;</span> Genus <span aria-hidden="true">&rarr;</span> Species</strong></p>
       <div class="mnemonic">"Dear King Philip Came Over For Good Spaghetti"</div>
       <p class="explain" style="margin-top:0.5rem"><strong>Three Domains</strong>: Bacteria, Archaea, Eukarya. Species are named with two-part Latin names: <em>Homo sapiens</em> (genus capitalized, species lowercase, italicized).</p>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 9. ECOLOGY ═══════ -->
-  <div class="section" id="s9">
+  <!-- ======= 9. ECOLOGY ======= -->
+  <section class="section" id="s9">
     <div class="section-title"><span class="section-num">9</span><h2>Ecology</h2></div>
     <hr class="section-rule">
 
@@ -887,7 +905,8 @@
       <h3>Species Interactions</h3>
       <p class="explain">When two species interact, each one is either helped (+), harmed (-), or unaffected (0):</p>
       <table class="tbl">
-        <tr><th>Interaction</th><th>Effect</th><th>Example</th></tr>
+        <caption class="sr-only">Types of species interactions</caption>
+        <tr><th scope="col">Interaction</th><th scope="col">Effect</th><th scope="col">Example</th></tr>
         <tr><td>Mutualism</td><td>+/+</td><td>Bees and flowers (both benefit)</td></tr>
         <tr><td>Commensalism</td><td>+/0</td><td>Barnacles on a whale</td></tr>
         <tr><td>Parasitism</td><td>+/-</td><td>Tick on a dog</td></tr>
@@ -913,17 +932,17 @@
       <p class="explain"><strong>Secondary succession</strong>: starts after a disturbance where soil already exists (forest fire, abandoned farm). Much faster, usually decades.</p>
       <p class="explain">Both progress toward a stable <strong>climax community</strong>.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 10. HUMAN BODY ESSENTIALS ═══════ -->
-  <div class="section" id="s10">
+  <!-- ======= 10. HUMAN BODY ESSENTIALS ======= -->
+  <section class="section" id="s10">
     <div class="section-title"><span class="section-num">10</span><h2>Human Body Essentials</h2></div>
     <hr class="section-rule">
 
     <div class="card">
       <h3>Blood and the Heart</h3>
       <p class="explain">The heart is a four-chambered pump. Blood flows in a loop:</p>
-      <p class="explain" style="text-align:center"><span class="f">Body <span aria-hidden="true">→</span> Vena cava <span aria-hidden="true">→</span> R atrium <span aria-hidden="true">→</span> R ventricle <span aria-hidden="true">→</span> Lungs <span aria-hidden="true">→</span> L atrium <span aria-hidden="true">→</span> L ventricle <span aria-hidden="true">→</span> Aorta <span aria-hidden="true">→</span> Body</span></p>
+      <p class="explain" style="text-align:center"><span class="f">Body <span aria-hidden="true">&rarr;</span> Vena cava <span aria-hidden="true">&rarr;</span> R atrium <span aria-hidden="true">&rarr;</span> R ventricle <span aria-hidden="true">&rarr;</span> Lungs <span aria-hidden="true">&rarr;</span> L atrium <span aria-hidden="true">&rarr;</span> L ventricle <span aria-hidden="true">&rarr;</span> Aorta <span aria-hidden="true">&rarr;</span> Body</span></p>
       <p class="explain">The right side pumps blood to the lungs (to pick up oxygen). The left side pumps oxygenated blood to the entire body.</p>
       <p class="explain"><strong>Universal donor</strong>: O- (no antigens). <strong>Universal recipient</strong>: AB+ (no antibodies against A, B, or Rh).</p>
       <div class="tip">Normal resting heart rate: 60-100 bpm. Normal blood pressure: about 120/80 mmHg.</div>
@@ -935,7 +954,7 @@
       <p class="explain"><strong>Peripheral nervous system (PNS)</strong>: all the nerves going to and from the rest of the body.</p>
       <p class="explain">The autonomic (automatic) nervous system has two branches: <strong>sympathetic</strong> ("fight or flight," speeds things up) and <strong>parasympathetic</strong> ("rest and digest," slows things down).</p>
       <p class="explain">A neuron sends signals electrically along its length, then chemically across the gap (synapse) to the next cell using <strong>neurotransmitters</strong>.</p>
-      <div class="tip">Neuron resting potential: about -70 mV. Normal body temperature: 37°C (98.6°F).</div>
+      <div class="tip">Neuron resting potential: about -70 mV. Normal body temperature: 37&deg;C (98.6&deg;F).</div>
     </div>
 
     <div class="card">
@@ -945,16 +964,16 @@
       <p class="explain"><strong>Epinephrine (adrenaline)</strong>: fight-or-flight response.</p>
       <p class="explain"><strong>ADH</strong>: tells kidneys to reabsorb water.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 11. LAB BASICS ═══════ -->
-  <div class="section" id="s11">
+  <!-- ======= 11. LAB BASICS ======= -->
+  <section class="section" id="s11">
     <div class="section-title"><span class="section-num">11</span><h2>Lab &amp; Scientific Method</h2></div>
     <hr class="section-rule">
 
     <div class="card">
       <h3>The Scientific Method</h3>
-      <p class="explain">Science follows a cycle: <strong>Observation <span aria-hidden="true">→</span> Question <span aria-hidden="true">→</span> Hypothesis <span aria-hidden="true">→</span> Experiment <span aria-hidden="true">→</span> Analysis <span aria-hidden="true">→</span> Conclusion</strong>.</p>
+      <p class="explain">Science follows a cycle: <strong>Observation <span aria-hidden="true">&rarr;</span> Question <span aria-hidden="true">&rarr;</span> Hypothesis <span aria-hidden="true">&rarr;</span> Experiment <span aria-hidden="true">&rarr;</span> Analysis <span aria-hidden="true">&rarr;</span> Conclusion</strong>.</p>
       <p class="explain"><strong>Independent variable</strong>: the one thing you deliberately change.</p>
       <p class="explain"><strong>Dependent variable</strong>: the thing you measure (it "depends" on your change).</p>
       <p class="explain"><strong>Control group</strong>: gets no treatment, so you have a baseline to compare against.</p>
@@ -969,19 +988,20 @@
 
       <div class="tip">A hypothesis must be testable and falsifiable. "Plants grow taller with fertilizer" is testable. "Plants have feelings" is not (currently). Also: correlation does not equal causation.</div>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 12. KEY NUMBERS ═══════ -->
-  <div class="section" id="s12">
+  <!-- ======= 12. KEY NUMBERS ======= -->
+  <section class="section" id="s12">
     <div class="section-title"><span class="section-num">12</span><h2>Numbers to Memorize</h2></div>
     <hr class="section-rule">
 
     <div class="card">
       <table class="tbl">
-        <tr><th>Fact</th><th>Value</th></tr>
+        <caption class="sr-only">Key biology facts and values to memorize</caption>
+        <tr><th scope="col">Fact</th><th scope="col">Value</th></tr>
         <tr><td>Elements of life</td><td>CHNOPS</td></tr>
         <tr><td>pH of blood</td><td>7.35 to 7.45</td></tr>
-        <tr><td>Body temperature</td><td>37°C / 98.6°F</td></tr>
+        <tr><td>Body temperature</td><td>37&deg;C / 98.6&deg;F</td></tr>
         <tr><td>Human chromosomes (body cells)</td><td>46 (23 pairs)</td></tr>
         <tr><td>Standard amino acids</td><td>20</td></tr>
         <tr><td>Total codons / stop codons</td><td>64 / 3 (UAA, UAG, UGA)</td></tr>
@@ -990,17 +1010,17 @@
         <tr><td>ATP from aerobic respiration</td><td>~30-32 per glucose</td></tr>
         <tr><td>ATP from glycolysis alone</td><td>2 (net)</td></tr>
         <tr><td>Energy transfer between trophic levels</td><td>~10%</td></tr>
-        <tr><td>Prokaryotic cell size / Eukaryotic cell size</td><td>1-10 µm / 10-100 µm</td></tr>
+        <tr><td>Prokaryotic cell size / Eukaryotic cell size</td><td>1-10 &#181;m / 10-100 &#181;m</td></tr>
         <tr><td>Human bones (adult)</td><td>206</td></tr>
         <tr><td>Neuron resting potential</td><td>-70 mV</td></tr>
         <tr><td>Resting heart rate / blood pressure</td><td>60-100 bpm / ~120/80</td></tr>
         <tr><td>Universal blood donor / recipient</td><td>O- / AB+</td></tr>
       </table>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 13. QUIZ ═══════ -->
-  <div class="section" id="s13">
+  <!-- ======= 13. QUIZ ======= -->
+  <section class="section" id="s13">
     <div class="section-title"><span class="section-num">13</span><h2>Practice Quiz</h2></div>
     <hr class="section-rule">
     <p style="margin-bottom:1.25rem;color:var(--text-soft);">Pick the best answer, then check your score.</p>
@@ -1009,29 +1029,29 @@
       <button class="btn btn-primary" onclick="checkAll()">Check My Answers</button>
       <button class="btn btn-outline" onclick="resetAll()">Start Over</button>
     </div>
-    <div class="score-box" id="score-box">
+    <div class="score-box" id="score-box" role="status">
       <div class="score-big" id="score-num"></div>
       <div class="score-msg" id="score-msg"></div>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════ 14. FLASHCARDS ═══════ -->
-  <div class="section" id="s14">
+  <!-- ======= 14. FLASHCARDS ======= -->
+  <section class="section" id="s14">
     <div class="section-title"><span class="section-num">14</span><h2>Flashcards</h2></div>
     <hr class="section-rule">
-    <p style="margin-bottom:0.75rem;color:var(--text-soft);">Click a card to flip it.</p>
-    <div class="fc-filters" id="fc-filters"></div>
+    <p style="margin-bottom:0.75rem;color:var(--text-soft);">Click or press Enter on a card to flip it.</p>
+    <div class="fc-filters" id="fc-filters" role="toolbar" aria-label="Filter flashcards by topic"></div>
     <div class="fc-grid" id="fc-box"></div>
-  </div>
+  </section>
 
-  <div class="footer">Biology 1 Basics &mdash; Study Guide</div>
+  <footer class="footer">Biology 1 Basics &mdash; Study Guide</footer>
 </div>
 
 <script>
 // ===== QUIZ =====
-const Q=[
+var Q=[
   {q:"The six elements that make up ~98% of living matter are:",o:["C, H, O, N, P, S","C, H, O, N, Fe, Ca","C, H, O, Na, K, Cl","C, H, O, N, Mg, Zn"],a:0,e:"CHNOPS: Carbon, Hydrogen, Oxygen, Nitrogen, Phosphorus, Sulfur.",t:"Chemistry"},
-  {q:"A solution at pH 4 has how many more H⁺ ions than pH 6?",o:["2 times","20 times","100 times","1000 times"],a:2,e:"Each pH unit = 10x change. Two steps = 10 x 10 = 100 times more.",t:"Chemistry"},
+  {q:"A solution at pH 4 has how many more H\u207A ions than pH 6?",o:["2 times","20 times","100 times","1000 times"],a:2,e:"Each pH unit = 10x change. Two steps = 10 x 10 = 100 times more.",t:"Chemistry"},
   {q:"Proteins are built from amino acids linked by:",o:["Glycosidic bonds","Peptide bonds","Phosphodiester bonds","Hydrogen bonds"],a:1,e:"Amino acids are joined by peptide bonds to form polypeptides (proteins).",t:"Chemistry"},
   {q:"Water's ability to resist temperature changes is due to its:",o:["Low density as ice","High specific heat","Universal solvent properties","Cohesion"],a:1,e:"High specific heat means water absorbs a lot of heat before its temperature rises.",t:"Chemistry"},
   {q:"Which organelle produces most of the cell's ATP?",o:["Nucleus","Ribosome","Mitochondria","Golgi apparatus"],a:2,e:"Mitochondria are the powerhouse of the cell.",t:"Cells"},
@@ -1039,7 +1059,7 @@ const Q=[
   {q:"Evidence for endosymbiotic theory includes:",o:["Mitochondria have linear DNA","Chloroplasts have 80S ribosomes","Mitochondria have circular DNA and double membranes","Chloroplasts are in animal cells"],a:2,e:"Circular DNA, double membranes, 70S ribosomes, and binary fission all point to prokaryotic origin.",t:"Cells"},
   {q:"A cell in a hypotonic solution will:",o:["Shrivel","Swell and possibly burst","Stay the same","Lose its nucleus"],a:1,e:"Water enters by osmosis, causing the cell to swell. Animal cells may lyse.",t:"Transport"},
   {q:"Active transport requires ATP because it moves molecules:",o:["From high to low concentration","Through protein channels","Against their concentration gradient","Across the cell wall"],a:2,e:"Active transport pushes molecules from low to high concentration (uphill), which requires energy.",t:"Transport"},
-  {q:"Enzymes speed up reactions by:",o:["Raising the temperature","Lowering activation energy","Changing the free energy (ΔG)","Adding more substrate"],a:1,e:"Enzymes lower activation energy. They do NOT change the overall ΔG.",t:"Energy"},
+  {q:"Enzymes speed up reactions by:",o:["Raising the temperature","Lowering activation energy","Changing the free energy (\u0394G)","Adding more substrate"],a:1,e:"Enzymes lower activation energy. They do NOT change the overall \u0394G.",t:"Energy"},
   {q:"Net ATP from glycolysis per glucose:",o:["0","2","4","36"],a:1,e:"Glycolysis makes 4 ATP but uses 2 to start, so net = 2.",t:"Energy"},
   {q:"Where do light reactions of photosynthesis occur?",o:["Stroma","Thylakoid membranes","Cytoplasm","Mitochondrial matrix"],a:1,e:"Light reactions occur in the thylakoid membranes. Calvin cycle is in the stroma.",t:"Energy"},
   {q:"If DNA is 20% adenine, what percent is cytosine?",o:["20%","30%","40%","60%"],a:1,e:"A = T = 20% (40% total). Remaining 60% split: G = C = 30%.",t:"DNA"},
@@ -1050,7 +1070,7 @@ const Q=[
   {q:"During which phase do chromosomes line up in the middle?",o:["Prophase","Metaphase","Anaphase","Telophase"],a:1,e:"Metaphase = Middle. Chromosomes align at the metaphase plate.",t:"Cell Division"},
   {q:"In Bb x Bb, the phenotype ratio is:",o:["1:1","1:2:1","3:1","9:3:3:1"],a:2,e:"BB + Bb + Bb + bb = 3 dominant : 1 recessive phenotype ratio.",t:"Genetics"},
   {q:"AB blood type is an example of:",o:["Incomplete dominance","Codominance","Epistasis","Pleiotropy"],a:1,e:"Both A and B alleles are fully expressed. That's codominance.",t:"Genetics"},
-  {q:"In Hardy-Weinberg, 2pq represents:",o:["Homozygous dominant","Homozygous recessive","Heterozygous frequency","Total alleles"],a:2,e:"p² = homozygous dominant, 2pq = heterozygous, q² = homozygous recessive.",t:"Genetics"},
+  {q:"In Hardy-Weinberg, 2pq represents:",o:["Homozygous dominant","Homozygous recessive","Heterozygous frequency","Total alleles"],a:2,e:"p\u00B2 = homozygous dominant, 2pq = heterozygous, q\u00B2 = homozygous recessive.",t:"Genetics"},
   {q:"Natural selection does NOT require:",o:["Variation","Heritability","Sexual reproduction","Differential reproductive success"],a:2,e:"Natural selection works in asexual organisms too. Sexual reproduction is not required.",t:"Evolution"},
   {q:"Homologous structures are evidence of:",o:["Convergent evolution","Common ancestry","Analogous function","Genetic drift"],a:1,e:"Same bone structure in different species = common ancestor.",t:"Evolution"},
   {q:"About what % of energy transfers between trophic levels?",o:["1%","10%","50%","90%"],a:1,e:"The 10% rule: only about 10% passes up; the rest is lost as heat.",t:"Ecology"},
@@ -1061,39 +1081,57 @@ const Q=[
 ];
 
 function buildQuiz(){
-  const c=document.getElementById('quiz-box');c.innerHTML='';
-  Q.forEach((q,i)=>{
-    const d=document.createElement('div');d.className='quiz-q';d.id='q'+i;
-    d.innerHTML='<div class="q-tag">Question '+(i+1)+' · '+q.t+'</div><p class="q-text">'+q.q+'</p><ul class="quiz-opts">'+q.o.map((o,j)=>'<li><label id="l'+i+'-'+j+'"><input type="radio" name="q'+i+'" value="'+j+'"> '+o+'</label></li>').join('')+'</ul><div class="q-feedback" id="fb'+i+'"></div>';
+  var c=document.getElementById('quiz-box');c.innerHTML='';
+  Q.forEach(function(q,i){
+    var d=document.createElement('div');d.className='quiz-q';d.id='q'+i;
+    d.innerHTML='<div class="q-tag">Question '+(i+1)+' \u00B7 '+q.t+'</div><p class="q-text">'+q.q+'</p><fieldset class="quiz-opts" style="border:none;padding:0;margin:0;"><legend class="sr-only">Answer options for question '+(i+1)+'</legend>'+q.o.map(function(o,j){return '<label id="l'+i+'-'+j+'"><input type="radio" name="q'+i+'" value="'+j+'"> '+o+'</label>';}).join('')+'</fieldset><div class="q-feedback" id="fb'+i+'" role="alert"></div>';
     c.appendChild(d);
   });
 }
 
 function checkAll(){
-  let right=0;
-  Q.forEach((q,i)=>{
-    const sel=document.querySelector('input[name="q'+i+'"]:checked');
-    const fb=document.getElementById('fb'+i);
-    q.o.forEach((_,j)=>{document.getElementById('l'+i+'-'+j).className=''});
+  var right=0;
+  Q.forEach(function(q,i){
+    var sel=document.querySelector('input[name="q'+i+'"]:checked');
+    var fb=document.getElementById('fb'+i);
+    q.o.forEach(function(_,j){document.getElementById('l'+i+'-'+j).className='';});
     if(sel){
-      const v=+sel.value;
-      if(v===q.a){right++;document.getElementById('l'+i+'-'+v).className='correct';fb.className='q-feedback visible fb-right';fb.textContent='<span aria-hidden="true">✓</span> '+q.e}
-      else{document.getElementById('l'+i+'-'+v).className='wrong';document.getElementById('l'+i+'-'+q.a).className='show-correct';fb.className='q-feedback visible fb-wrong';fb.textContent='<span aria-hidden="true">✗</span> '+q.e}
-    }else{document.getElementById('l'+i+'-'+q.a).className='show-correct';fb.className='q-feedback visible fb-wrong';fb.textContent='No answer selected. '+q.e}
+      var v=+sel.value;
+      if(v===q.a){
+        right++;
+        document.getElementById('l'+i+'-'+v).className='correct';
+        fb.className='q-feedback visible fb-right';
+        fb.innerHTML='\u2713 '+q.e;
+      } else {
+        document.getElementById('l'+i+'-'+v).className='wrong';
+        document.getElementById('l'+i+'-'+q.a).className='show-correct';
+        fb.className='q-feedback visible fb-wrong';
+        fb.innerHTML='\u2717 '+q.e;
+      }
+    } else {
+      document.getElementById('l'+i+'-'+q.a).className='show-correct';
+      fb.className='q-feedback visible fb-wrong';
+      fb.innerHTML='No answer selected. '+q.e;
+    }
   });
-  const sb=document.getElementById('score-box');const pct=Math.round(right/Q.length*100);
+  var sb=document.getElementById('score-box');var pct=Math.round(right/Q.length*100);
   document.getElementById('score-num').textContent=right+' / '+Q.length;
-  document.getElementById('score-msg').textContent=pct+'% — '+(pct>=90?'Excellent!':pct>=70?'Nice work! Review what you missed.':'Keep going! Re-read the sections above and try again.');
+  document.getElementById('score-msg').textContent=pct+'% \u2014 '+(pct>=90?'Excellent!':pct>=70?'Nice work! Review what you missed.':'Keep going! Re-read the sections above and try again.');
   sb.style.display='block';sb.scrollIntoView({behavior:'smooth',block:'center'});
 }
 
 function resetAll(){
-  Q.forEach((q,i)=>{document.querySelectorAll('input[name="q'+i+'"]').forEach(r=>r.checked=false);q.o.forEach((_,j)=>{document.getElementById('l'+i+'-'+j).className=''});const fb=document.getElementById('fb'+i);fb.className='q-feedback';fb.textContent=''});
-  document.getElementById('score-box').style.display='none';document.getElementById('quiz-box').scrollIntoView({behavior:'smooth'});
+  Q.forEach(function(q,i){
+    document.querySelectorAll('input[name="q'+i+'"]').forEach(function(r){r.checked=false;});
+    q.o.forEach(function(_,j){document.getElementById('l'+i+'-'+j).className='';});
+    var fb=document.getElementById('fb'+i);fb.className='q-feedback';fb.innerHTML='';
+  });
+  document.getElementById('score-box').style.display='none';
+  document.getElementById('quiz-box').scrollIntoView({behavior:'smooth'});
 }
 
 // ===== FLASHCARDS =====
-const FC=[
+var FC=[
   {q:"Six elements of life?",a:"CHNOPS: Carbon, Hydrogen, Nitrogen, Oxygen, Phosphorus, Sulfur.",c:"Chemistry"},
   {q:"Why is water a good solvent?",a:"It's polar. Partial charges dissolve ionic and polar substances.",c:"Chemistry"},
   {q:"Why does ice float?",a:"Hydrogen bonds form an open lattice when frozen, making ice less dense than liquid water.",c:"Chemistry"},
@@ -1109,14 +1147,14 @@ const FC=[
   {q:"Fluid mosaic model?",a:"Cell membrane = phospholipid bilayer with embedded proteins.",c:"Transport"},
   {q:"Cell in hypotonic solution?",a:"Swells (water enters). Animal cells may burst (lyse).",c:"Transport"},
   {q:"Cell in hypertonic solution?",a:"Shrivels (water leaves). Animal cells crenate.",c:"Transport"},
-  {q:"Passive vs. active transport?",a:"Passive: no energy, high<span aria-hidden="true">→</span>low. Active: ATP, low<span aria-hidden="true">→</span>high (against gradient).",c:"Transport"},
-  {q:"What do enzymes do?",a:"Lower activation energy to speed up reactions. Don't change ΔG.",c:"Energy"},
-  {q:"Cellular respiration equation?",a:"C₆H₁₂O₆ + 6O₂ <span aria-hidden="true">→</span> 6CO₂ + 6H₂O + ~30-32 ATP.",c:"Energy"},
-  {q:"Photosynthesis equation?",a:"6CO₂ + 6H₂O + light <span aria-hidden="true">→</span> C₆H₁₂O₆ + 6O₂.",c:"Energy"},
+  {q:"Passive vs. active transport?",a:"Passive: no energy, high \u2192 low. Active: ATP, low \u2192 high (against gradient).",c:"Transport"},
+  {q:"What do enzymes do?",a:"Lower activation energy to speed up reactions. Don't change \u0394G.",c:"Energy"},
+  {q:"Cellular respiration equation?",a:"C\u2086H\u2081\u2082O\u2086 + 6O\u2082 \u2192 6CO\u2082 + 6H\u2082O + ~30-32 ATP.",c:"Energy"},
+  {q:"Photosynthesis equation?",a:"6CO\u2082 + 6H\u2082O + light \u2192 C\u2086H\u2081\u2082O\u2086 + 6O\u2082.",c:"Energy"},
   {q:"Net ATP from glycolysis?",a:"2 ATP per glucose.",c:"Energy"},
   {q:"Where does the Krebs cycle happen?",a:"Mitochondrial matrix.",c:"Energy"},
   {q:"DNA base pairing rules?",a:"A-T (2 H-bonds), G-C (3 H-bonds).",c:"DNA"},
-  {q:"Central Dogma?",a:"DNA <span aria-hidden="true">→</span> (transcription) <span aria-hidden="true">→</span> mRNA <span aria-hidden="true">→</span> (translation) <span aria-hidden="true">→</span> Protein.",c:"DNA"},
+  {q:"Central Dogma?",a:"DNA \u2192 (transcription) \u2192 mRNA \u2192 (translation) \u2192 Protein.",c:"DNA"},
   {q:"Start codon? Stop codons?",a:"Start: AUG. Stop: UAA, UAG, UGA.",c:"DNA"},
   {q:"How many codons? Amino acids?",a:"64 codons code for 20 amino acids + stop.",c:"DNA"},
   {q:"Semiconservative replication?",a:"Each new DNA molecule has one old strand and one new strand.",c:"DNA"},
@@ -1127,7 +1165,7 @@ const FC=[
   {q:"Meiosis result?",a:"4 unique haploid (n) cells.",c:"Cell Division"},
   {q:"3 sources of genetic variation in meiosis?",a:"Crossing over, independent assortment, random fertilization.",c:"Cell Division"},
   {q:"Monohybrid cross phenotype ratio (Bb x Bb)?",a:"3:1 (dominant : recessive).",c:"Genetics"},
-  {q:"Hardy-Weinberg equations?",a:"p + q = 1 (alleles). p² + 2pq + q² = 1 (genotypes).",c:"Genetics"},
+  {q:"Hardy-Weinberg equations?",a:"p + q = 1 (alleles). p\u00B2 + 2pq + q\u00B2 = 1 (genotypes).",c:"Genetics"},
   {q:"Incomplete vs. codominance?",a:"Incomplete: blending (pink). Codominance: both expressed (AB blood).",c:"Genetics"},
   {q:"4 requirements for natural selection?",a:"Variation, heritability, overproduction, differential reproductive success.",c:"Evolution"},
   {q:"Homologous vs. analogous structures?",a:"Homologous: same origin, different function. Analogous: different origin, similar function.",c:"Evolution"},
@@ -1135,22 +1173,36 @@ const FC=[
   {q:"The 10% rule?",a:"Only ~10% of energy passes to the next trophic level. Rest lost as heat.",c:"Ecology"},
   {q:"Primary vs. secondary succession?",a:"Primary: bare rock, centuries. Secondary: soil exists, decades.",c:"Ecology"},
   {q:"Mutualism vs. commensalism vs. parasitism?",a:"+/+ both benefit. +/0 one benefits. +/- one benefits, other harmed.",c:"Ecology"},
-  {q:"Blood flow through the heart?",a:"Vena cava <span aria-hidden="true">→</span> R atrium <span aria-hidden="true">→</span> R ventricle <span aria-hidden="true">→</span> Lungs <span aria-hidden="true">→</span> L atrium <span aria-hidden="true">→</span> L ventricle <span aria-hidden="true">→</span> Aorta.",c:"Human Body"},
+  {q:"Blood flow through the heart?",a:"Vena cava \u2192 R atrium \u2192 R ventricle \u2192 Lungs \u2192 L atrium \u2192 L ventricle \u2192 Aorta.",c:"Human Body"},
   {q:"Insulin vs. glucagon?",a:"Insulin lowers blood sugar. Glucagon raises it. Both from pancreas.",c:"Human Body"},
   {q:"Universal blood donor / recipient?",a:"Donor: O-. Recipient: AB+.",c:"Human Body"},
   {q:"Independent vs. dependent variable?",a:"Independent: what you change. Dependent: what you measure.",c:"Lab"},
 ];
 
-let activeCat='All';
-function getCats(){return['All',...new Set(FC.map(f=>f.c))]}
-function buildFilters(){document.getElementById('fc-filters').innerHTML=getCats().map(c=>'<button class="fc-tag'+(c==='All'?' on':'')+'" onclick="pickCat(\''+c+'\')">'+c+'</button>').join('')}
-function pickCat(c){activeCat=c;document.querySelectorAll('.fc-tag').forEach(b=>b.classList.toggle('on',b.textContent===c));buildCards()}
-function buildCards(){const box=document.getElementById('fc-box');const list=activeCat==='All'?FC:FC.filter(f=>f.c===activeCat);box.innerHTML=list.map(f=>'<div class="fc" onclick="this.classList.toggle(\'flipped\')"><div class="fc-inner"><div class="fc-front"><div class="fc-cat">'+f.c+'</div><div class="fc-q">'+f.q+'</div><div class="fc-tap">click to flip</div></div><div class="fc-back"><div class="fc-cat">Answer</div><div class="fc-a">'+f.a+'</div></div></div></div>').join('')}
+var activeCat='All';
+function getCats(){return ['All'].concat(Array.from(new Set(FC.map(function(f){return f.c;}))));}
+function buildFilters(){
+  document.getElementById('fc-filters').innerHTML=getCats().map(function(c){
+    return '<button class="fc-tag'+(c==='All'?' on':'')+'" onclick="pickCat(\''+c+'\')">'+c+'</button>';
+  }).join('');
+}
+function pickCat(c){
+  activeCat=c;
+  document.querySelectorAll('.fc-tag').forEach(function(b){b.classList.toggle('on',b.textContent===c);});
+  buildCards();
+}
+function buildCards(){
+  var box=document.getElementById('fc-box');
+  var list=activeCat==='All'?FC:FC.filter(function(f){return f.c===activeCat;});
+  box.innerHTML=list.map(function(f){
+    return '<div class="fc" onclick="this.classList.toggle(\'flipped\')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();this.classList.toggle(\'flipped\');}" tabindex="0" role="button" aria-label="Flashcard: '+f.q.replace(/"/g,'&quot;')+' Press Enter to flip."><div class="fc-inner"><div class="fc-front"><div class="fc-cat">'+f.c+'</div><div class="fc-q">'+f.q+'</div><div class="fc-tap">click or press Enter to flip</div></div><div class="fc-back"><div class="fc-cat">Answer</div><div class="fc-a">'+f.a+'</div></div></div></div>';
+  }).join('');
+}
 
-document.addEventListener('DOMContentLoaded',()=>{buildQuiz();buildFilters();buildCards()});
+document.addEventListener('DOMContentLoaded',function(){buildQuiz();buildFilters();buildCards();});
 </script>
-  <div style="max-width: 800px; margin: 40px auto; padding: 20px 30px; background: #fff8e1; border-left: 4px solid #f9a825; border-radius: 8px; font-size: 14px; line-height: 1.6; color: #555;">
-  <div style="font-weight: bold; font-size: 15px; margin-bottom: 10px;"><span aria-hidden="true">⚠️</span> Important Notice</div>
+<div style="max-width: 800px; margin: 40px auto; padding: 20px 30px; background: #fff8e1; border-left: 4px solid #f9a825; border-radius: 8px; font-size: 14px; line-height: 1.6; color: #555;">
+  <div style="font-weight: bold; font-size: 15px; margin-bottom: 10px;">Important Notice</div>
   <p style="margin: 0 0 10px 0;">These study resources are provided free of charge for educational purposes only. They are intended as supplemental study aids and should not be used as a substitute for your course textbooks, lecture materials, or the guidance of your instructors.</p>
   <p style="margin: 0 0 10px 0;">While every effort has been made to ensure accuracy, this content may contain errors, omissions, or information that is out of date. Science is constantly evolving, and material that was accurate at the time of writing may no longer reflect current understanding. Always verify important facts, formulas, and concepts against your official course materials.</p>
   <p style="margin: 0 0 10px 0;">No guarantees are made regarding the completeness, accuracy, or reliability of any information presented on these sites. Use at your own discretion. If you spot an error, we appreciate you letting us know so it can be corrected.</p>
